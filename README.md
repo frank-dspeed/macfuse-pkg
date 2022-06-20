@@ -7,7 +7,22 @@ https://askubuntu.com/questions/38112/how-can-i-open-a-dmg-file
 ## Usage?
 Download from Releases Tab
 
+```
 installer -pkg Install\ macFUSE.pkg -target /Applications
+```
+
+#### Install the dmg directly?
+
+```
+sudo hdiutil attach <image>.dmg
+sudo installer -package /Volumes/<image>/<image>.pkg -target /
+sudo hdiutil detach /Volumes/<image>.
+
+<image>.app instead of <image>.pkg after doing sudo hdiutil attach <image>.dmg,
+you usally can just drag/copy it to /Applications
+
+```
+
 
 
 ## How? To Do it With StealifyOS
